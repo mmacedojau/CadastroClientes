@@ -29,6 +29,31 @@
       </div>
     </nav>
 
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5">
+          <?php
+            include("config.php");
+            switch(@$_REQUEST["page"]){
+              case "novo":
+                include("novo-cliente.php");
+                break;
+              case "listar":
+                include("listar-cliente.php");
+                break;
+              case "salvar":
+                include("salvar-cliente.php");
+                break;
+              case "editar":
+                include("editar-cliente.php");
+                break;
+              default:
+                print "<h1>Bem Vindo</h1>";
+            }
+          ?>
+        </div>
+      </div>
+    </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
